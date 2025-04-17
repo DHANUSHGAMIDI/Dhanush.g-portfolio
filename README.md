@@ -1,2 +1,2 @@
-# Dhanush.g-portfolio
+# Dhanush.G-portfolio
 My portfolio
