@@ -1,0 +1,102 @@
+contact.html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - G. Dhanush</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>G. Dhanush - Contact</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to reach out to me via email or phone.</p>
+        <ul>
+            <li>Email: <a href="mailto:dhanush_gamidi@srmap.edu.in">dhanush_gamidi@srmap.edu.in</a></li>
+            <li>Phone: <a href="tel:+919704948673">9704948673</a></li>
+        </ul>
+        <form>
+            <table border="1">
+                <tr>
+                    <td><label for="name">Your Name:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="mobile">Mobile Number:</label></td>
+                    <td><input type="text" id="mobile" name="mobile" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email Address:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="query">Your Query:</label></td>
+                    <td><textarea id="query" name="query" rows="5" cols="30" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <script>
+            function validateForm() {
+                // Get the input values
+                var name = document.getElementById("name").value;
+                var mobile = document.getElementById("mobile").value;
+                var email = document.getElementById("email").value;
+                var query = document.getElementById("query").value;
+        
+                // Validate Name: Ensure it's not empty
+                if (name === "") {
+                    alert("Please enter your name.");
+                    return false;
+                }
+        
+                // Validate Mobile: Ensure it's a valid 10-digit number
+                var mobileRegex = /^[0-9]{10}$/;
+                if (!mobileRegex.test(mobile)) {
+                    alert("Please enter a valid 10-digit mobile number.");
+                    return false;
+                }
+        
+                // Validate Email: Ensure it has a valid email format
+                var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (!emailRegex.test(email)) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                }
+        
+                // Validate Query: Ensure it's not empty
+                if (query === "") {
+                    alert("Please enter your query.");
+                    return false;
+                }
+        
+                // If everything is valid, return true
+                return true;
+            }
+        </script>
+        
+       
+    </section>
+
+    <footer>
+        <p>Made by G. Dhanush</p>
+    </footer>
+</body>
+</html>
